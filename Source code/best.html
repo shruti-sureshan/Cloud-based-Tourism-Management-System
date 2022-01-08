@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>Tourism Management System</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+<center><font face="Brush Script MT" size=8>Travel Agency</font></center>
+<p align=right><a href=sign.html>Sign in |</a><a href=account.html>My Account |</a>
+<body bgcolor="#FEF9E7 ">
+
+<ul>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a href="package.html">Holiday Packages</a></li>
+  <li><a href="best.html">Best Deals</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul><br>
+
+
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+th {
+    height: 20px;
+}
+</style>
+</head>
+<form name="pack"  action="bestdeals.php" method="post" onsubmit="return formvalidation2()">
+<body>
+<body bgcolor
+<font face="Times New Roman" size=5>
+<table>
+  <tr bgcolor="Aqua">
+
+ <th>Place</th>
+<th>Package</th>
+    <th>Price</th>
+<th>Discount Rate</th>
+  </tr>
+  <tr>
+    
+    <td>Rajasthan</td>
+     <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+<td><pre>
+<strike>14000</strike>
+<strike>12000</strike>
+<strike>20000</strike>
+</pre></td>
+<td><pre>
+12000
+10000
+18000
+</pre></td>
+  </tr>
+
+
+<tr>
+    <td>Goa</td>
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+ <td><pre>
+<strike>10000</strike>
+<strike>8000</strike>
+<strike>12000</strike>
+</pre></td>
+<td><pre>
+8000
+6500
+18000
+</pre></td>
+</tr>
+
+
+<tr>
+    
+    <td>Bangalore</td>
+    
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+<strike>20000</strike>
+<strike>15000</strike>
+<strike>25000</strike>
+</pre></td>
+<td><pre>
+18500
+12000
+18500
+</pre></td>
+</tr>
+
+<tr>
+    
+    <td>Kashmir</td>
+   
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+<strike>15000</strike>
+<strike>12000</strike>
+<strike>20000</strike>
+</pre></td>
+<td><pre>
+13500
+10500
+18000
+</pre></td>
+</tr>
+
+</table>
+</font>
+<br><br>
+
+<tr>
+<td>Number of Rooms:</td>
+<td><select name="room">
+<option selected="" value="Default">(Please select no.of rooms)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select></td>
+</tr><br><br>
+
+<input type=radio name="r">Delux
+<input type=radio name="r">Premium
+<input type=radio name="r">SuperDelux
+
+
+<br><br>
+
+
+<input type="submit" name="submit" value="submit" />
+
+
+</body>
+</html>
+
+
+

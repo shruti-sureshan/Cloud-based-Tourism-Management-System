@@ -1,0 +1,142 @@
+function formvalidation()
+{
+
+var fname=document.registration.t2;
+var lname=document.registration.t3;
+var mname=document.registration.t4;
+var pw=document.registration.t8;
+var uadd=document.registration.t6;
+var uemail=document.registration.t5;
+var uphone=document.registration.t7;
+
+if(password_validation(pw,7,12))
+{
+if(allLetter(fname))
+{
+if(allLetter(lname))
+{
+if(allLetter(mname))
+{
+if(alphanumeric(uadd))
+{
+if(ValidateEmail(uemail))
+{
+if(allnumeric(uphone))
+{
+alert("Successfully submitted");
+}
+}
+}
+}
+}
+}
+}
+}
+
+function password_validation(pw,mx,my)
+{
+var pw_len=pw.value.length;
+if(pw_len==0 || pw_len>my || pw_len<=mx)
+{
+alert("Password should not be empty/length be between "+mx+ "to" +my);
+pw.focus();
+return false;
+}
+return true;
+}
+function userid_validation(uid,mx,my)
+{
+var uid_len=uid.value.length;
+if(uid_len==0 || uid_len>my || uid_len<=mx)
+{
+alert("user id should not be empty/length be between "+mx+ "to" +my);
+uid.focus();
+return false;
+}
+return true;
+}
+
+function allLetter(fname)
+{
+var letters=/^[A-Za-z]+$/;
+if(fname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("username must have alphabets only");
+fname.focus();
+return false;
+}
+}
+function allLetter(lname)
+{
+var letters=/^[A-Za-z]+$/;
+if(lname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("username must have alphabets only");
+lname.focus();
+return false;
+}
+}
+function allLetter(mname)
+{
+var letters=/^[A-Za-z]+$/;
+if(mname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("username must have alphabets only");
+mname.focus();
+return false;
+}
+}
+function alphanumeric(uadd)
+{
+var letters=/^[0-9a-zA-Z, ]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("User address must have alphanumeric characters only");
+uadd.focus();
+return false;
+}
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
+function allnumeric(uphone)
+{ 
+var numbers = /^[0-9]+$/;
+if(uphone.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('phone no must have numeric characters only');
+uphone.focus();
+return false;
+}
+}

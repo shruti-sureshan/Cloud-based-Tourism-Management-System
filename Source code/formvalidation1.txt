@@ -1,0 +1,39 @@
+function formvalidation()
+{
+var fname=document.registration.fname;
+var pw=document.registration.password;
+
+
+if(password_validation(pw,7,12))
+{
+if(allLetter(fname))
+{
+alert("Successfully submitted");
+}
+}
+}
+function password_validation(pw,mx,my)
+{
+var pw_len=pw.value.length;
+if(pw_len==0 || pw_len>my || pw_len<=mx)
+{
+alert("Password should not be empty/length be between "+mx+ "to" +my);
+pw.focus();
+return false;
+}
+return true;
+}
+function allLetter(fname)
+{
+var letters=/^[A-Za-z]+$/;
+if(fname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("username must have alphabets only");
+fname.focus();
+return false;
+}
+}

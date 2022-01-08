@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Tourism Management System</title>
+<script src="formvalidation1.js"></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body onload="document.registration.userid.focus();">
+
+<center><font face="Brush Script MT" size=8>Travel Agency</font></center>
+<p align=right><a href="sign.html">Sign in |</a><a href="account.html">My Account |</a>
+<body bgcolor="#FEF9E7 ">
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="package.html">Holiday Packages</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+
+<center><h1>My Account</h1></center>
+<form name="registration"  action="account.php" method="post">
+<center>
+<table>
+
+
+
+<tr>
+<td>First name:</td>
+<td><input type="text" name="t2"/></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="t8"/></td>
+</tr>
+</table>
+
+<br><br>
+<input type="submit" name="submit" value="submit">
+</center><br><br>
+
+<p align=right><a href="display.html">Account details</a></p>
+<p align=right><a href="deletion.html">Do you want to delete your account?</a></p>
+<p align=right><a href="update.html">Do you want to update your account?</a></p>
+<p align=right><a href="feedback.html">Feedback</a></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<html>
+<head>
+<title>Tourism Management System</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+<center><font face="Brush Script MT" size=8>Travel Agency</font></center>
+<p align=right><a href=sign.html>Sign in |</a><a href=account.html>My Account |</a><a href=>Feedback</a>
+<body bgcolor="#FEF9E7 ">
+
+<ul>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a href="package.html">Holiday Packages</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul><br>
+
+
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 20px;
+}
+</style>
+</head>
+<form name="pack"  action="package.php" method="post" onsubmit="return formvalidation2()">
+<body>
+<body bgcolor
+<font face="Times New Roman" size=1>
+<table>
+  <tr bgcolor="Aqua">
+
+    <th>Place</th>
+<th></th>
+    <th>Description</th>
+    <th>Package</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+
+    <td>Rajasthan</td>
+    <td><img src="Rajasthan.jpg" alt=img width=500 height=200></td>
+    <td>One of the jewels in India's crown, Rajasthan is probably at its most appealing when seen from the berth of an express train. An epic railway journey across India's largest state reveals sleepy villages frozen in time many centuries ago, ancient fortresses and temples with commanding views over the surrounding landscape, and giant cities teeming with life, noise, heat, color, and spice. </td>
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+14000
+12000
+20000
+</pre></td>
+  </tr>
+
+
+<tr>
+
+    <td>Goa</td>
+    <td><img src="Goa.jpg" alt=img width=500 height=200></td>
+    <td>Pint-sized Goa is more than beaches and trance parties. A kaleidoscopic blend of Indian and Portuguese cultures, sweetened with sun, sea, sand, seafood and spirituality, there's nowhere in India quite like it. Experience the beauty of golden sandy beaches, lush countryside ambience and a spectacular sunset view of India's beach town, Goa. Temples, mosques and wildlife sanctuaries provide diversions from the beach.</td>
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+10000
+8000
+120000
+</pre></td>
+
+</tr>
+
+
+<tr>
+
+    <td>Bangalore</td>
+    <td><img src="Bangalore.jpg" alt=img width=500 height=200></td>
+    <td>Bangalore has the perfect blend of various historical places, traditions, different cultures, modernization, the colorful gardens, and the pleasant climate adds a flavor for the tourist to visit. Having evolved gradually from being the Garden City to the Silicon Valley of India, Bengaluru is the third largest and one of the most livable cities in India.</td>
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+20000
+15000
+250000
+</pre></td>
+
+</tr>
+
+<tr>
+
+    <td>Kashmir</td>
+    <td><img src="kashmir.jpg" alt=img width=500 height=200></td>
+    <td>The valley of Kashmir is as rich with history and political controversy as it is with culture and natural phenomena. Sample exquisitely spiced native cuisines and festive teas, then walk off your meal along the rugged trekking routes to the north. Marvel at the famous houseboats of Srinagar and take a spiritual moment to reflect at one of the many pilgrimage sites and religious shrines that dot the region. Of course, native craftsmanship makes for excellent souvenirs�carpets and textiles are an especial shopping must.</td>
+    <td><pre>
+Delux
+Premium
+SuperDelux
+</pre></td>
+
+  <td><pre>
+15000
+12000
+20000
+</pre></td>
+
+</tr>
+
+</table>
+<br><br>
+
+<tr>
+<td>From:</td>
+<td><select name="source">
+<option selected="" value="Default">(Please select a Place)</option>
+<option value="MU">Mumbai</option>
+<option value="DL">Delhi</option>
+<option value="HY">Hyderabad</option>
+<option value="KK">Kolkata</option>
+</select></td>
+
+<td>Depart:</td>
+<td><input type="date" name=depart></td>
+<td><select name="time">
+<option selected="" value="Default">(Please select a time)</option>
+<option value="M">Morning</option>
+<option value="E">Evening</option>
+<option value="N">Night</option>
+</select></td>
+</tr>
+<br><br>
+
+
+<tr>
+<td>To:</td>
+<td><select name="destination">
+<option selected="" value="Default">(Please select a Place)</option>
+<option value="Rj" '>Rajasthan</option>
+<option value="G" >Goa</option>
+<option value="BL" >Bangalore</option>
+<option value="KS" >Kashmir</option>
+</select></td>
+
+
+<td>Return:</td>
+<td><input type="date" name=return></td>
+<td><select name="time">
+<option selected="" value="Default">(Please select a time)</option>
+<option value="M">Morning</option>
+<option value="E">Evening</option>
+<option value="N">Night</option>
+</select></td>
+</tr>
+<br><br>
+<input type=radio name="r">Delux
+<input type=radio name="r">Premium
+<input type=radio name="r">SuperDelux
+
+
+<br><br>
+<label><b>Number of People</b>(cost of 1 person is Rs.10,000):</b></label>
+<select name="person" onchange="calculateAmount(this.value)" required>
+<option value="" disabled selected>Select</option>
+
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+			</select>
+<br><br>
+
+
+
+
+<label><b>Total Amount</b></label>
+ <input type="text" name="tot_amount" id="tot_amount"  readonly>
+<script>
+            function calculateAmount(val) {
+
+                var tot_price = val * 10000;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount');
+                divobj.value = tot_price;
+            }
+
+
+        </script>
+
+
+
+
+
+<br><br>
+
+
+<input type="submit" name="submit" value="submit" />
+</body>
+</html>

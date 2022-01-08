@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Tourism Management System</title>
+<script src="formvalidation.js"></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body onload="document.registration.t2.focus();">
+<center><font face="Brush Script MT" size=8>Travel Agency</font></center>
+<p align=right><a href="sign.html">Sign in |</a><a href="account.html">My Account |</a>
+<body bgcolor="#FEF9E7 ">
+<ul>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a href="package.html">Holiday Packages</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+
+<center><h1>Sign In</h1></center>
+<form name="registration"  action="insertion.php" method="post" >
+<center>
+<table>
+<tr>
+<td>User ID:</td>
+<td><input type="text" name="t1" disabled /></td>
+</tr>
+<tr>
+<td>First name:</td>
+<td><input type="text" name="t2"/></td>
+</tr>
+<tr>
+<td>Last name:</td>
+<td><input type="text" name="t3"/></td>
+</tr>
+<tr>
+<td>Middle name:</td>
+<td><input type="text" name="t4"/></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="t8"/></td>
+</tr>
+<tr>
+
+<tr>
+<td>Address:</td>
+<td><input type="text" name="t6"/></td>
+</tr>
+
+<tr>
+<td>Email id:</td>
+<td><input type="text" name="t5"/></td>
+</tr>
+
+<tr>
+<td>Phone no:</td>
+<td><input type="text" name="t7"/></td>
+</tr>
+
+
+
+</table>
+
+<br><br>
+<input type="submit" name="submit" id="submit" value="submit" onclick="return formvalidation();"/>
+</center>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Tourism Management System</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<center><font face="Brush Script MT" size=8>Travel Agency</font></center>
+<p align=right><a href=sign.html>Sign in |</a><a href=account.html>My Account |</a>
+<body bgcolor="#FEF9E7 ">
+
+<ul>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a href="package.html">Holiday Packages</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+<center><h1>Feedback</h1></center>
+<form name="registration"  action="feedback.php" method="post" >
+<center>
+<div class="slidecontainer">
+<table>
+<tr>
+<td>User ID:</td>
+<td><input type="text" name="t1" /></td>
+</tr>
+<tr>
+<td>What was your first impression when you entered website?</td>
+<td><input type="range" name="q1" min="1" max="100" value="1" class="slider" id="q1"></td>
+</tr>
+<tr>
+<td>How did you first hear about us?</td>
+<td><input type="range" name="q2" min="1" max="100" value="1" class="slider" id="q2"></td>
+</tr>
+<tr>
+<td>Is there anything missing on this page?</td>
+
+<td><input type="range" name="q3" min="1" max="100" value="1" class="slider" id="q3"></td>
+</tr>
+<tr>
+<td>How likely are you to recommend us to a friend or collegue?</td>
+<td><input type="range" name="q4" min="1" max="100" value="1" class="slider" id="q4"></td>
+</tr>
+</table>
+</div>
+<input type="submit" name="submit" id="submit" value="submit" >
+</body>
+</html>

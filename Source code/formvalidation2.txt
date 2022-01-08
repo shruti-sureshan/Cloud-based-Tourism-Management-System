@@ -1,0 +1,44 @@
+function formvalidation2()
+{
+var place1=document.registration.source;
+var place2=document.registration.destination;
+var package=document.registration.r;
+if(placeselect(place1))
+{
+if(placeselect(place2))
+{
+alert("Successfully submitted");
+}
+}
+}
+
+function countryselect(place1)
+{
+if(place1.value == "Default")
+{
+alert('Select your country from the list');
+place1.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function placeselect(place2)
+{
+if(place2.value == "Default")
+{
+alert('Select your country from the list');
+place2.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+
+
+
